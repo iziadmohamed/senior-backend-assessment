@@ -1,0 +1,54 @@
+{
+    "realm": "propertyrental",
+    "enabled": true,
+    "clients": [
+      {
+        "clientId": "springboot-client",
+        "secret": "secret",
+        "protocol": "openid-connect",
+        "publicClient": false,
+        "redirectUris": ["*"],
+        "directAccessGrantsEnabled": true
+      }
+    ],
+    "users": [
+      {
+        "username": "admin",
+        "firstName": "admin",
+        "lastName": "admin",
+        "email": "admin@stc.com",
+        "enabled": true,
+        "credentials": [{ "type": "password", "value": "admin" , "temporary": false }],
+        "realmRoles": ["admin"],
+        "requiredActions": []
+      },
+      {
+        "username": "owner",
+        "firstName": "owner",
+        "lastName": "owner",
+        "email": "owner@stc.com",
+        "enabled": true,
+        "credentials": [{ "type": "password", "value": "owner" , "temporary": false }],
+        "realmRoles": ["owner"],
+        "requiredActions": []
+      },
+      {
+        "username": "user",
+        "firstName": "user",
+        "lastName": "user",
+        "email": "user@stc.com",
+        "enabled": true,
+        "credentials": [{ "type": "password", "value": "user", "temporary": false  }],
+        "realmRoles": ["user"],
+        "requiredActions": []
+      }
+    ],
+    "roles": {
+      "realm": [
+        { "name": "admin" },
+        { "name": "owner" },
+        { "name": "user" }
+      ]
+    }
+  }
+  
