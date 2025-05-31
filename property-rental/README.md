@@ -61,27 +61,38 @@ A multi-tenant property rental system built with **Spring Boot**, **PostgreSQL**
 git clone https://github.com/your-username/property-rental-app.git
 cd property-rental-app
 
+./mvnw clean package -DskipTests
+
 # Start all services
 docker-compose up --build
-
+```
 App will be available at: http://localhost:8080
 
-Keycloak: http://localhost:8081 (import realm config)
+Keycloak: http://localhost:8081 
 
+### Get Access Token
+```bash
+curl --location 'http://localhost:8081/realms/propertyrental/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=password' \
+--data-urlencode 'client_id=springboot-client' \
+--data-urlencode 'client_secret=secret' \
+--data-urlencode 'username=admin' \
+--data-urlencode 'password=admin'
+```
 🧪 Running Tests
-bash
-Copy
-Edit
-./mvnw test
-
+```bash
+./mvnw clean test
+```
 Testcontainers will spin up PostgreSQL, Keycloak , kafka and elasticsearch
 
 
 🛠 Realm import: Configure users, roles, and clients via realm-export.json
 
-👨‍💻 Author
-Ziad Saber
-Senior Backend Developer
-📧 Email: iziadmuhamed@gmail.com
-🔗 LinkedIn: linkedin.com/in/ziad-saber-a85a6a122
+## 👨‍💻 Author
 
+**Ziad Saber**  
+_Senior Backend Developer_
+
+- 🔗 [LinkedIn Profile](https://linkedin.com/in/ziad-saber-a85a6a122)  
+- 📧 Email: [iziadmuhamed@gmail.com](mailto:iziadmuhamed@gmail.com)
