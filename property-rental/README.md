@@ -88,11 +88,3 @@ Testcontainers will spin up PostgreSQL, Keycloak , kafka and elasticsearch
 
 
 🛠 Realm import: Configure users, roles, and clients via realm-export.json
-
-## 👨‍💻 Author
-
-**Ziad Saber**  
-_Senior Backend Developer_
-
-- 🔗 [LinkedIn Profile](https://linkedin.com/in/ziad-saber-a85a6a122)  
-- 📧 Email: [iziadmuhamed@gmail.com](mailto:iziadmuhamed@gmail.com)
