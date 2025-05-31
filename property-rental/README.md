@@ -11,7 +11,7 @@ A multi-tenant property rental system built with **Spring Boot**, **PostgreSQL**
 - 📅 **Booking System** with overlap prevention  
 - 🔍 **Search & Filter** by availability, location, and amenities  
 - 📄 **RESTful APIs** with DTO mapping, pagination, and validation  
-- 🧪 **Integration Tests** with Testcontainers ( PostgreSQL, Keycloak, kafka, elasticsearch)  
+- 🧪 **Integration Tests** with Testcontainers ( PostgreSQL, Keycloak, Kafka, Elasticsearch)  
 - 🐳 **Dockerized** environment using Docker Compose  
 - 📦 **Flyway** for database migration  
 - ⚙️ Clean architecture with SOLID principles  
@@ -84,7 +84,7 @@ curl --location 'http://localhost:8081/realms/propertyrental/protocol/openid-con
 ```bash
 ./mvnw clean test
 ```
-Testcontainers will spin up PostgreSQL, Keycloak , kafka and elasticsearch
+Testcontainers will spin up PostgreSQL, Keycloak , Kafka and Elasticsearch
 
 
 🛠 Realm import: Configure users, roles, and clients via realm-export.json
